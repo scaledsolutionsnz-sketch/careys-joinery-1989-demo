@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Careys Joinery 1989 | Custom Kitchens &amp; Joinery, Marton</title>
+<meta name="description" content="Careys Joinery 1989 designs, builds and installs custom kitchens, bathrooms, wardrobes and commercial fitouts from its Marton workshop. Over 110 years of joinery in the Rangitikei.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<meta property="og:title" content="Careys Joinery 1989 | Custom Kitchens &amp; Joinery, Marton">
+<meta property="og:description" content="Custom kitchens, bathrooms, wardrobes and fitouts, designed and made in Marton. Free 30-minute onsite consultation.">
+<meta property="og:image" content="img/hero-kitchen-a.jpg">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#241d15;
+  --ink-soft:#4a4237;
+  --bone:#fbfaf7;
+  --band:#f4f1ea;
+  --gold:#b9862f;
+  --gold-deep:#775417;
+  --line:rgba(36,29,21,.12);
+  --radius:14px;
+  --display:'Marcellus',serif;
+  --body:'Manrope',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--bone);font-size:16px;line-height:1.7;overflow-x:hidden;animation:pageIn .9s ease both}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+img{max-width:100%;display:block;image-orientation:from-image}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.15}
+h2{font-size:clamp(1.9rem,4vw,2.7rem);letter-spacing:.01em}
+::selection{background:var(--gold);color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.section{padding:88px 0}
+@media(max-width:768px){.section{padding:60px 0}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  body{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(251,250,247,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1120px;margin:0 auto;padding:0 20px;height:70px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo img{height:36px;width:auto}
+.nav-links{display:flex;align-items:center;gap:26px;font-weight:600;font-size:.92rem}
+.nav-links a{color:var(--ink-soft);transition:color .25s}
+.nav-links a:hover{color:var(--gold-deep)}
+.nav-call{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 18px;background:var(--ink);color:#fff;border-radius:var(--radius);font-weight:700;font-size:.9rem;line-height:1;transition:background .25s}
+.nav-call:hover{background:var(--gold-deep)}
+.nav-call svg{width:15px;height:15px;flex:none}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:10px;margin-right:-10px}
+.burger svg{width:26px;height:26px;display:block;color:var(--ink)}
+.m-menu{display:none;background:var(--bone);border-bottom:1px solid var(--line);padding:12px 20px 22px}
+.m-menu a{display:block;padding:13px 4px;font-weight:600;border-bottom:1px solid var(--line)}
+.m-menu .nav-call{margin-top:16px;width:100%;justify-content:center;height:48px}
+.m-menu.open{display:block}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .burger{display:block}
+  .nav-in{gap:10px}
+  .nav-logo img{height:28px}
+  .nav-call{height:38px;padding:0 12px;font-size:.82rem}
+}
+
+/* hero */
+.hero{position:relative;min-height:100dvh;display:flex;align-items:center;background:#1c160f;color:#fff;overflow:hidden}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease}
+.hero-slide.on{opacity:1}
+.hero-slide img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(24,18,11,.62) 0%,rgba(24,18,11,.44) 45%,rgba(24,18,11,.72) 100%)}
+.hero-in{position:relative;z-index:2;width:100%;padding-top:130px;padding-bottom:70px}
+.hero h1{font-size:clamp(2rem,calc(3.2vw + 19px),4rem);max-width:17ch;text-wrap:balance;margin-bottom:20px}
+.hero-sub{max-width:46ch;font-size:clamp(.98rem,calc(.6vw + 12px),1.08rem);color:rgba(255,255,255,.88);margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:var(--radius);font-weight:700;font-size:1rem;line-height:1;transition:transform .2s,background .25s,color .25s;cursor:pointer;border:0}
+.btn:active{transform:scale(.98)}
+.btn-gold{background:var(--gold);color:var(--ink)}
+.btn-gold:hover{background:var(--gold-deep);color:#fff}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(6px)}
+.btn-ghost:hover{background:rgba(255,255,255,.2)}
+.btn svg{width:16px;height:16px;flex:none}
+.hero-review{max-width:430px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:18px 22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.hero-review .stars{color:#e8c98a;display:flex;gap:3px;margin-bottom:8px}
+.hero-review .stars svg{width:15px;height:15px}
+.hr-quote{font-size:.95rem;color:rgba(255,255,255,.92);min-height:3.4em;transition:opacity .5s}
+.hr-quote.fade{opacity:0}
+.hr-name{margin-top:8px;font-size:.8rem;font-weight:700;color:rgba(255,255,255,.6)}
+
+/* services */
+.sec-head{max-width:60ch;margin-bottom:44px}
+.sec-head p{color:var(--ink-soft);margin-top:14px;max-width:52ch}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+@media(max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.svc-grid{grid-template-columns:1fr}}
+.svc{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s}
+.svc:hover{transform:translateY(-5px);box-shadow:0 18px 40px -18px rgba(30,27,22,.32)}
+.svc-img{aspect-ratio:4/3;overflow:hidden}
+.svc-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.9) contrast(1.03);transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.svc:hover .svc-img img{transform:scale(1.04)}
+.svc-body{padding:22px 24px 26px}
+.svc-tag{display:inline-flex;align-items:center;gap:7px;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:10px}
+.svc-tag svg{width:14px;height:14px}
+.svc h3{font-size:1.35rem;margin-bottom:8px}
+.svc p{font-size:.93rem;color:var(--ink-soft)}
+
+/* process */
+.process{background:#241d15;color:#f4efe6}
+.process h2{color:#fff;max-width:22ch}
+.process-sub{color:rgba(244,239,230,.75);margin-top:14px;max-width:52ch}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:52px;border-top:1px solid rgba(244,239,230,.15)}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step{padding:30px 26px 8px 0}
+.step h3{color:#e8c98a;font-size:1.3rem;margin-bottom:10px}
+.step p{font-size:.92rem;color:rgba(244,239,230,.78)}
+
+/* about */
+.about{background:var(--band)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:36px}}
+.about-photo{position:relative}
+.about-photo img{border-radius:var(--radius);width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.9) contrast(1.03)}
+.about-tag{position:absolute;left:18px;bottom:18px;background:var(--gold);color:var(--ink);font-weight:800;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;border-radius:10px}
+.about-copy p{color:var(--ink-soft);margin:16px 0}
+.checks{list-style:none;margin-top:24px}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;font-weight:600}
+.checks svg{width:20px;height:20px;color:var(--gold-deep);flex:none;margin-top:4px}
+
+/* gallery */
+.masonry{column-count:3;column-gap:18px;margin-top:44px}
+@media(max-width:900px){.masonry{column-count:2}}
+@media(max-width:560px){.masonry{column-count:1}}
+.masonry figure{break-inside:avoid;margin:0 0 18px}
+.masonry img{width:100%;height:auto;display:block;border-radius:var(--radius);filter:saturate(.9) contrast(1.03)}
+.masonry figcaption{font-size:.8rem;color:var(--ink-soft);padding:8px 4px 0}
+
+/* crew */
+.crew-note{display:inline-block;font-size:.78rem;font-weight:700;color:var(--ink-soft);background:var(--band);border:1px solid var(--line);border-radius:8px;padding:5px 12px;margin-top:14px}
+.crew-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+@media(max-width:860px){.crew-grid{grid-template-columns:1fr;max-width:420px}}
+.crew-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:34px 28px;text-align:center;transition:transform .3s,box-shadow .3s}
+.crew-card:hover{transform:translateY(-4px);box-shadow:0 16px 36px -18px rgba(30,27,22,.28)}
+.avatar{width:86px;height:86px;border-radius:50%;background:#241d15;color:#e8c98a;font-family:var(--display);font-size:1.7rem;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;border:3px solid var(--gold)}
+.crew-card h3{font-size:1.25rem}
+.crew-role{font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin:6px 0 12px}
+.crew-card p{font-size:.9rem;color:var(--ink-soft)}
+
+/* reviews */
+.reviews{background:var(--band)}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}
+@media(max-width:860px){.rev-grid{grid-template-columns:1fr}}
+.rev-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:14px}
+.rev-card .stars{display:flex;gap:3px;color:var(--gold)}
+.rev-card .stars svg{width:16px;height:16px}
+.rev-card p{font-size:.95rem;color:var(--ink-soft);flex:1}
+.rev-who{font-weight:700;font-size:.9rem}
+.rev-who span{display:block;font-weight:500;font-size:.78rem;color:var(--ink-soft)}
+.rev-actions{margin-top:36px;display:flex;justify-content:center}
+.btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+
+/* review banner */
+.banner{background:#241d15;color:#fff}
+.banner-in{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-top:56px;padding-bottom:56px}
+.banner h2{color:#fff;max-width:20ch}
+.banner p{color:rgba(244,239,230,.75);margin-top:10px;max-width:44ch}
+
+/* contact */
+.contact-card{background:#fff;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);overflow:hidden;display:grid;grid-template-columns:1.05fr 1fr;box-shadow:0 24px 60px -30px rgba(30,27,22,.28)}
+@media(max-width:860px){.contact-card{grid-template-columns:1fr}}
+.contact-map{min-height:420px}
+.contact-map iframe{width:100%;height:100%;border:0;display:block}
+@media(max-width:860px){.contact-map{min-height:300px;order:2}}
+.contact-body{padding:44px 40px}
+@media(max-width:560px){.contact-body{padding:32px 24px}}
+.contact-body h2{margin-bottom:8px}
+.contact-body>p{color:var(--ink-soft);margin-bottom:26px;max-width:40ch}
+.contact-btns{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.contact-btns .btn{width:100%}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:var(--gold-deep)}
+.c-rows{display:flex;flex-direction:column;gap:14px;border-top:1px solid var(--line);padding-top:24px}
+.c-row{display:flex;gap:14px;align-items:flex-start;font-size:.94rem}
+.c-row svg{width:19px;height:19px;color:var(--gold-deep);flex:none;margin-top:4px}
+.c-row strong{display:block;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft)}
+.socials{display:flex;gap:12px;margin-top:26px}
+.socials a{width:44px;height:44px;border-radius:12px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--ink);transition:all .25s}
+.socials a:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.socials svg{width:19px;height:19px}
+
+/* footer */
+footer{background:#1c160f;color:rgba(244,239,230,.75);padding:56px 0 34px}
+.foot-grid{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap;align-items:flex-start}
+.foot-logo img{height:40px;width:auto;filter:brightness(1.9)}
+.foot-tag{margin-top:14px;font-size:.88rem;max-width:34ch}
+.foot-col h3{color:#fff;font-family:var(--body);font-size:.82rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:14px}
+.foot-col a{display:block;padding:5px 0;font-size:.92rem;transition:color .25s}
+.foot-col a:hover{color:#e8c98a}
+.foot-social{display:flex;gap:10px;margin-top:4px}
+.foot-social a{width:40px;height:40px;border:1px solid rgba(244,239,230,.25);border-radius:11px;display:flex;align-items:center;justify-content:center;padding:0;transition:all .25s}
+.foot-social a:hover{background:#e8c98a;color:#1c160f;border-color:#e8c98a}
+.foot-social svg{width:17px;height:17px}
+.foot-base{border-top:1px solid rgba(244,239,230,.15);margin-top:44px;padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.82rem;color:rgba(244,239,230,.5)}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="#top" aria-label="Careys Joinery home">
+      <img src="img/logo.png" alt="Careys Joinery logo" width="245" height="60">
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-call" href="tel:+6463277949">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      06 327 7949
+    </a>
+    <button class="burger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+  <div class="m-menu" id="mMenu">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-call" href="tel:+6463277949">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call 06 327 7949
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide on"><img src="img/hero-kitchen-a.jpg" alt="" width="1800" height="1350" fetchpriority="high"></div>
+    <div class="hero-slide"><img src="img/hero-kitchen-c.jpg" alt="" width="1183" height="888" loading="lazy"></div>
+    <div class="hero-slide"><img src="img/hero-kitchen-b.jpg" alt="" width="1800" height="1013" loading="lazy"></div>
+  </div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <h1 class="rv in">Custom kitchens and joinery, made in Marton</h1>
+    <p class="hero-sub rv in">Designed, machined and installed by our own team, from a workshop that has built joinery for over 110 years.</p>
+    <div class="hero-ctas rv in">
+      <a class="btn btn-gold" href="#contact">Get a quote</a>
+      <a class="btn btn-ghost" href="tel:+6463277949">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call 06 327 7949
+      </a>
+    </div>
+    <div class="hero-review rv in" id="heroReview">
+      <div class="stars" aria-label="Five star review">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+      </div>
+      <p class="hr-quote" id="hrQuote">"The kitchen came out better than the drawings. Fitted in two days, no mess left behind."</p>
+      <p class="hr-name" id="hrName">Example review</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>What we build</h2>
+      <p>Every job is measured, machined and finished in our Bowen Street workshop, then installed by the same team that built it.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc rv">
+        <div class="svc-img"><img src="img/kitchen3.jpg" alt="White shaker kitchen with green tile splashback built by Careys Joinery" width="1800" height="1013" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h18M9 21V9"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>Residential</span>
+          <h3>Kitchens</h3>
+          <p>Full custom kitchens, from layout and 3D concepts through to benchtops, soft-close cabinetry and installation.</p>
+        </div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-img"><img src="img/bathroom.jpg" alt="Custom bathroom vanity by Careys Joinery" width="1200" height="675" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a1 1 0 0 1 1 1 7 7 0 0 1-7 7h-4a7 7 0 0 1-7-7 1 1 0 0 1 1-1z"/><path d="M6 12V5a2 2 0 0 1 2-2h1"/></svg>Residential</span>
+          <h3>Bathrooms &amp; Vanities</h3>
+          <p>Vanities and bathroom cabinetry built to handle steam and daily use, sized exactly to your room.</p>
+        </div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-img"><img src="img/laundry.jpg" alt="Fitted laundry cabinetry by Careys Joinery" width="1200" height="675" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4"/><path d="M8 6h2"/></svg>Residential</span>
+          <h3>Laundries</h3>
+          <p>Hard-working laundry storage that hides the machines and keeps benches clear.</p>
+        </div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-img"><img src="img/wardrobe.jpg" alt="Walk-in wardrobe with shelving and drawers by Careys Joinery" width="1200" height="1600" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M12 3v18M9 10h.01M15 10h.01"/></svg>Residential</span>
+          <h3>Wardrobes &amp; Storage</h3>
+          <p>Walk-in and reach-in wardrobes with shelving, drawers and hanging space planned around what you own.</p>
+        </div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-img"><img src="img/fitout-vets.jpg" alt="Curved reception desk fitout built by Careys Joinery" width="1200" height="900" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>Commercial</span>
+          <h3>Shop &amp; Office Fitouts</h3>
+          <p>Reception desks, counters and boutique commercial fitouts, like the curved desk we built for a local vet clinic.</p>
+        </div>
+      </article>
+      <article class="svc rv">
+        <div class="svc-img"><img src="img/workshop-a.jpg" alt="Tiled cafe counter built and installed by Careys Joinery" width="1200" height="675" loading="lazy"></div>
+        <div class="svc-body">
+          <span class="svc-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Custom</span>
+          <h3>Stairs &amp; One-off Pieces</h3>
+          <p>Stairs, cafe counters and anything else that needs a joiner rather than a flat-pack. If you can sketch it, we can build it.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section process">
+  <div class="wrap">
+    <h2 class="rv">From first measure to final fit</h2>
+    <p class="process-sub rv">One team carries your job the whole way, so nothing gets lost between the drawing and the install.</p>
+    <div class="steps">
+      <div class="step rv">
+        <h3>Consult</h3>
+        <p>A free 30-minute onsite visit to measure up and talk through what you want. Bring your plans or just your ideas.</p>
+      </div>
+      <div class="step rv">
+        <h3>Design</h3>
+        <p>Concept plans with material and finish options. 3D visuals are free for accepted quotes and their revisions.</p>
+      </div>
+      <div class="step rv">
+        <h3>Build</h3>
+        <p>Machined and assembled in our Marton workshop using NZ-made materials wherever we can get them.</p>
+      </div>
+      <div class="step rv">
+        <h3>Install</h3>
+        <p>Delivered and fitted by our own installers, coordinated with your plumber, electrician and painter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo rv">
+      <img src="img/old-workshop.jpg" alt="Historic photograph of the original Careys Joinery workshop in Marton" width="480" height="360" loading="lazy">
+      <span class="about-tag">Since the 1910s</span>
+    </div>
+    <div class="about-copy rv">
+      <h2>A Marton workshop with over 110 years behind it</h2>
+      <p>Careys Joinery started making joinery in Marton more than a century ago. The machinery has changed, the standards have not. Today the workshop pairs skilled tradespeople with current CNC machinery, so a hand-finished job still arrives on time and on budget.</p>
+      <p>We are 100% Kiwi owned and use New Zealand-made materials from New Zealand suppliers wherever possible.</p>
+      <ul class="checks">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Free 30-minute onsite consultation and quote</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Design, manufacture and install under one roof</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>NZ-made materials from NZ suppliers</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>Recent work</h2>
+      <p>Kitchens, wardrobes and fitouts photographed as we handed them over. Every one built at 7 Bowen Street.</p>
+    </div>
+    <div class="masonry">
+      <figure class="rv"><img src="img/kitchen2-5.jpg" alt="Modern kitchen island with oak slat panelling" width="1183" height="888" loading="lazy"><figcaption>Oak island kitchen</figcaption></figure>
+      <figure class="rv"><img src="img/kitchen4-2.jpg" alt="Country kitchen with white cabinetry and range cooker" width="1200" height="900" loading="lazy"><figcaption>Country kitchen, Rangitikei</figcaption></figure>
+      <figure class="rv"><img src="img/kitchen1.jpg" alt="Kitchen with dark benchtop and timber accents" width="1200" height="675" loading="lazy"><figcaption>Family kitchen renovation</figcaption></figure>
+      <figure class="rv"><img src="img/fitout-vets2.jpg" alt="Reception desk with timber slats at a veterinary clinic" width="1200" height="900" loading="lazy"><figcaption>Vet clinic reception fitout</figcaption></figure>
+      <figure class="rv"><img src="img/kitchen3-2.jpg" alt="Shaker style kitchen with green splashback tiles" width="1200" height="675" loading="lazy"><figcaption>Shaker kitchen with green tile</figcaption></figure>
+      <figure class="rv"><img src="img/colour-samples.jpg" alt="Cabinet door colour and finish samples in the showroom" width="360" height="480" loading="lazy"><figcaption>Finish samples in the showroom</figcaption></figure>
+      <figure class="rv"><img src="img/kitchen-h6.jpg" alt="Kitchen storage wall with integrated appliances" width="1200" height="675" loading="lazy"><figcaption>Full-height storage wall</figcaption></figure>
+      <figure class="rv"><img src="img/kitchen5.jpg" alt="Compact kitchen with custom cabinetry" width="1200" height="675" loading="lazy"><figcaption>Compact kitchen build</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>The people on your job</h2>
+      <span class="crew-note">Example team. Real names and photos to come.</span>
+    </div>
+    <div class="crew-grid">
+      <div class="crew-card rv">
+        <div class="avatar" aria-hidden="true">JC</div>
+        <h3>Owner / Operator</h3>
+        <p class="crew-role">Quotes &amp; consults</p>
+        <p>Your first point of contact. Runs the onsite consults and keeps every quote honest.</p>
+      </div>
+      <div class="crew-card rv">
+        <div class="avatar" aria-hidden="true">WL</div>
+        <h3>Workshop Lead</h3>
+        <p class="crew-role">Machining &amp; assembly</p>
+        <p>Runs the CNC and bench work, and signs off every carcass before it leaves the workshop.</p>
+      </div>
+      <div class="crew-card rv">
+        <div class="avatar" aria-hidden="true">SI</div>
+        <h3>Site Installer</h3>
+        <p class="crew-role">Delivery &amp; fitting</p>
+        <p>Fits the job on site and coordinates with your plumber, sparky and painter around the install.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <h2>What clients say</h2>
+      <span class="crew-note">Example reviews while we connect the Google listing. Written in the voice of real joinery clients.</span>
+    </div>
+    <div class="rev-grid" id="revGrid"></div>
+    <div class="rev-actions rv">
+      <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Careys%20Joinery%201989%20Marton" target="_blank" rel="noopener">See all our Google reviews</a>
+    </div>
+  </div>
+</section>
+
+<section class="banner">
+  <div class="wrap banner-in">
+    <div class="rv">
+      <h2>Happy with our work?</h2>
+      <p>A short Google review helps other Rangitikei locals find a joiner they can rely on.</p>
+    </div>
+    <a class="btn btn-gold rv" href="https://www.google.com/maps/search/?api=1&query=Careys%20Joinery%201989%20Marton" target="_blank" rel="noopener">Leave us a review</a>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="wrap">
+    <div class="contact-card rv">
+      <div class="contact-map">
+        <iframe title="Map showing Careys Joinery at 7 Bowen Street, Marton" src="https://www.google.com/maps?q=Careys%20Joinery%207%20Bowen%20Street%20Marton%20New%20Zealand&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="contact-body">
+        <h2>Start your project</h2>
+        <p>Ring or email and we will book your free 30-minute onsite consult.</p>
+        <div class="contact-btns">
+          <a class="btn btn-ink" href="tel:+6463277949">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Careys Joinery
+          </a>
+          <a class="btn btn-gold" data-gmail data-user="info" data-domain="careysjoinery.co.nz" data-su="Joinery%20quote%20enquiry" href="#contact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            Email Careys Joinery
+          </a>
+        </div>
+        <div class="c-rows">
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div><strong>Phone</strong>06 327 7949 · 027 244 8866</div>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            <div><strong>Email</strong><span data-emailtext data-user="info" data-domain="careysjoinery.co.nz"></span></div>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><strong>Workshop</strong>7 Bowen Street, Marton 4710</div>
+          </div>
+          <div class="c-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div><strong>Hours</strong>Monday to Friday, 7:30am to 5:00pm</div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/careys.joinery/" target="_blank" rel="noopener" aria-label="Careys Joinery on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="img/logo.png" alt="Careys Joinery logo" width="245" height="60" loading="lazy"></div>
+        <p class="foot-tag">Quality custom made joinery from Marton, serving the Rangitikei and Manawatu-Whanganui.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Site</h3>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h3>Legal</h3>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+      <div class="foot-col">
+        <h3>Follow</h3>
+        <div class="foot-social">
+          <a href="https://www.facebook.com/careys.joinery/" target="_blank" rel="noopener" aria-label="Careys Joinery on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 Careys Joinery (1989) Limited. All rights reserved.</span>
+      <span>7 Bowen Street, Marton, New Zealand</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* mobile menu */
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('mMenu');
+  burger.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); });
+  });
+
+  /* hero slideshow */
+  var slides = document.querySelectorAll('.hero-slide');
+  var si = 0;
+  if(!reduce && slides.length > 1){
+    setInterval(function(){
+      slides[si].classList.remove('on');
+      si = (si + 1) % slides.length;
+      slides[si].classList.add('on');
+    }, 6000);
+  }
+
+  /* reviews data (examples, badged in the section heading) */
+  var reviews = [
+    {q:'"The kitchen came out better than the drawings. Fitted in two days, no mess left behind."', n:'Marie T, Marton', r:5},
+    {q:'"They measured our odd 1920s walls and every cabinet still went in square. You can tell it is workshop-built, not flat-pack."', n:'Grant H, Bulls', r:5},
+    {q:'"Quote was clear, the 3D pictures matched what arrived, and they worked in with our builder without fuss."', n:'Aroha W, Whanganui', r:5}
+  ];
+  var star = '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>';
+  var grid = document.getElementById('revGrid');
+  reviews.forEach(function(rv){
+    var card = document.createElement('div');
+    card.className = 'rev-card rv';
+    card.innerHTML = '<div class="stars" aria-label="' + rv.r + ' star review">' + star.repeat(rv.r) + '</div><p>' + rv.q + '</p><div class="rev-who">' + rv.n + '<span>Example review</span></div>';
+    grid.appendChild(card);
+  });
+
+  /* hero review rotation */
+  var hq = document.getElementById('hrQuote');
+  var hn = document.getElementById('hrName');
+  var ri = 0;
+  hq.textContent = reviews[0].q.replace(/"/g,'');
+  hn.textContent = reviews[0].n + ' (example review)';
+  if(!reduce){
+    setInterval(function(){
+      hq.classList.add('fade');
+      setTimeout(function(){
+        ri = (ri + 1) % reviews.length;
+        hq.textContent = reviews[ri].q.replace(/"/g,'');
+        hn.textContent = reviews[ri].n + ' (example review)';
+        hq.classList.remove('fade');
+      }, 500);
+    }, 6500);
+  }
+
+  /* scroll reveals */
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+
+  /* email assembly (kept out of static HTML) */
+  document.querySelectorAll('a[data-gmail]').forEach(function(a){
+    var to = a.getAttribute('data-user') + '@' + a.getAttribute('data-domain');
+    a.href = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) + '&su=' + (a.getAttribute('data-su') || '') + '&body=' + (a.getAttribute('data-body') || '');
+    a.target = '_blank';
+    a.rel = 'noopener';
+  });
+  document.querySelectorAll('[data-emailtext]').forEach(function(s){
+    s.textContent = s.getAttribute('data-user') + '@' + s.getAttribute('data-domain');
+  });
+})();
+</script>
+</body>
+</html>
